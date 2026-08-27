@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Nama & Pasangan</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cover Section -->
+    <section id="cover" class="cover-section">
+        <div class="cover-content">
+            <h4>Undangan Pernikahan</h4>
+            <h1>Nama & Pasangan</h1>
+            <p>Kepada Yth. Bapak/Ibu/Saudara/i,</p>
+            <h3 id="guest-name">Tamu Undangan</h3>
+            <button id="open-invitation" class="btn"><i class="fa-solid fa-envelope-open"></i> Buka Undangan</button>
+        </div>
+    </section>
+
+    <!-- Main Content (Hidden until opened) -->
+    <div id="main-content" class="hidden">
+        
+        <!-- Hero Section with Parallax -->
+        <header class="hero parallax">
+            <div class="hero-content">
+                <p>The Wedding of</p>
+                <h1>Nama & Pasangan</h1>
+                <p>27 Desember 2026</p>
+            </div>
+        </header>
+
+        <!-- Couple Section -->
+        <section class="section couple">
+            <h2>Mempelai Bahagia</h2>
+            <p class="subtitle">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri..."</p>
+            <div class="couple-container">
+                <div class="person">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Mempelai Pria">
+                    <h3>Nama Pria, S.T.</h3>
+                    <p>Putra dari Bpk. A & Ibu B</p>
+                </div>
+                <span class="amp">&amp;</span>
+                <div class="person">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Mempelai Wanita">
+                    <h3>Nama Wanita, S.Pd.</h3>
+                    <p>Putri dari Bpk. C & Ibu D</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section with Auto Slide & Manual Navigation -->
+        <section class="section gallery-section">
+            <h2>Galeri Momen Kami</h2>
+            <p class="subtitle">Kebahagiaan yang kami abadikan dalam balutan cinta</p>
+            
+            <div class="slider-container">
+                <div class="slider-track" id="sliderTrack">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Gallery 1">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Gallery 2">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Gallery 3">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" alt="Gallery 4">
+                    </div>
+                </div>
+
+                <!-- Manual Navigation Buttons -->
+                <button class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <!-- Dots Indicators -->
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details -->
+        <section class="section events">
+            <h2>Acara Pernikahan</h2>
+            <div class="event-card">
+                <h3>Akad Nikah</h3>
+                <p><i class="fa-regular fa-calendar"></i> Sabtu, 27 Desember 2026</p>
+                <p><i class="fa-regular fa-clock"></i> 08.00 WIB - Selesai</p>
+                <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna, Jakarta</p>
+            </div>
+            <div class="event-card">
+                <h3>Resepsi</h3>
+                <p><i class="fa-regular fa-calendar"></i> Sabtu, 27 Desember 2026</p>
+                <p><i class="fa-regular fa-clock"></i> 11.00 - 14.00 WIB</p>
+                <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna, Jakarta</p>
+            </div>
+        </section>
+
+        <!-- Final Section: Maps, Gift & Transfer with Parallax Background -->
+        <section class="section info-section parallax-bg" id="lokasi-gift">
+            <div class="info-wrapper">
+                <h2>Lokasi & Informasi</h2>
+
+                <!-- Google Maps -->
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-map-location-dot"></i> Lokasi Acara</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666!2d106.82496!3d-6.17539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMzEuNCJTIDEwNsKwNDknMjkuOSJF!5e0!3m2!1sid!2sid!4v1!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Rekening Bank -->
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-wallet"></i> Kirim Amplop / Rekening</h3>
+                    <p>Doa restu Anda merupakan karunia terindah. Jika ingin memberi tanda kasih, dapat melalui:</p>
+                    <div class="bank-box">
+                        <p><strong>BCA</strong></p>
+                        <p id="acc-no">1234567890</p>
+                        <p>a.n. Nama Pemilik Rekening</p>
+                        <button class="btn-sm" onclick="copyText('1234567890')"><i class="fa-regular fa-copy"></i> Salin Nomor Rekening</button>
+                    </div>
+                </div>
+
+                <!-- Alamat Gift / Kado Fisik -->
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-gift"></i> Kirim Kado Fisik</h3>
+                    <p>Alamat Pengiriman Kado:</p>
+                    <address class="address-box">
+                        <strong>Rumah Mempelai</strong><br>
+                        Jl. Contoh Alamat No. 123, RT 01/RW 02, Kel. Menteng, Kec. Menteng, Jakarta Pusat, 10310
+                    </address>
+                    <button class="btn-sm" onclick="copyText('Jl. Contoh Alamat No. 123, Jakarta Pusat')"><i class="fa-regular fa-copy"></i> Salin Alamat</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Undangan Pernikahan - Nama & Pasangan</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
