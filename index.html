@@ -11,8 +11,8 @@
 </head>
 <body>
 
-    <!-- Cover Section -->
-    <section id="cover" class="cover-section">
+    <!-- Cover Section (Halaman Depan) -->
+    <section id="cover" class="snap-section cover-section">
         <div class="cover-content">
             <h4>Undangan Pernikahan</h4>
             <h1>Nama & Pasangan</h1>
@@ -22,20 +22,21 @@
         </div>
     </section>
 
-    <!-- Main Content (Hidden until opened) -->
-    <div id="main-content" class="hidden">
+    <!-- Main Scroll Container (Setiap section menjadi 1 slide penuh) -->
+    <div id="main-content" class="hidden snap-container">
         
-        <!-- Hero Section with Parallax -->
-        <header class="hero parallax">
+        <!-- Section 1: Hero Parallax -->
+        <section class="snap-section hero parallax">
             <div class="hero-content">
                 <p>The Wedding of</p>
                 <h1>Nama & Pasangan</h1>
                 <p>27 Desember 2026</p>
             </div>
-        </header>
+            <div class="scroll-indicator"><i class="fa-solid fa-chevron-down"></i></div>
+        </section>
 
-        <!-- Couple Section -->
-        <section class="section couple">
+        <!-- Section 2: Mempelai -->
+        <section class="snap-section couple">
             <h2>Mempelai Bahagia</h2>
             <p class="subtitle">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri..."</p>
             <div class="couple-container">
@@ -53,32 +54,22 @@
             </div>
         </section>
 
-        <!-- Gallery Section with Auto Slide & Manual Navigation -->
-        <section class="section gallery-section">
+        <!-- Section 3: Gallery Slider -->
+        <section class="snap-section gallery-section">
             <h2>Galeri Momen Kami</h2>
             <p class="subtitle">Kebahagiaan yang kami abadikan dalam balutan cinta</p>
             
             <div class="slider-container">
                 <div class="slider-track" id="sliderTrack">
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Gallery 1">
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Gallery 2">
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Gallery 3">
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" alt="Gallery 4">
-                    </div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Gallery 1"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Gallery 2"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Gallery 3"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" alt="Gallery 4"></div>
                 </div>
 
-                <!-- Manual Navigation Buttons -->
                 <button class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
 
-                <!-- Dots Indicators -->
                 <div class="slider-dots" id="sliderDots">
                     <span class="dot active" data-index="0"></span>
                     <span class="dot" data-index="1"></span>
@@ -88,65 +79,62 @@
             </div>
         </section>
 
-        <!-- Event Details -->
-        <section class="section events">
+        <!-- Section 4: Detail Acara -->
+        <section class="snap-section events">
             <h2>Acara Pernikahan</h2>
-            <div class="event-card">
-                <h3>Akad Nikah</h3>
-                <p><i class="fa-regular fa-calendar"></i> Sabtu, 27 Desember 2026</p>
-                <p><i class="fa-regular fa-clock"></i> 08.00 WIB - Selesai</p>
-                <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna, Jakarta</p>
-            </div>
-            <div class="event-card">
-                <h3>Resepsi</h3>
-                <p><i class="fa-regular fa-calendar"></i> Sabtu, 27 Desember 2026</p>
-                <p><i class="fa-regular fa-clock"></i> 11.00 - 14.00 WIB</p>
-                <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna, Jakarta</p>
+            <div class="event-cards-wrapper">
+                <div class="event-card">
+                    <h3>Akad Nikah</h3>
+                    <p><i class="fa-regular fa-calendar"></i> Sabtu, 27 Desember 2026</p>
+                    <p><i class="fa-regular fa-clock"></i> 08.00 WIB - Selesai</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna, Jakarta</p>
+                </div>
+                <div class="event-card">
+                    <h3>Resepsi</h3>
+                    <p><i class="fa-regular fa-calendar"></i> Sabtu, 27 Desember 2026</p>
+                    <p><i class="fa-regular fa-clock"></i> 11.00 - 14.00 WIB</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna, Jakarta</p>
+                </div>
             </div>
         </section>
 
-        <!-- Final Section: Maps, Gift & Transfer with Parallax Background -->
-        <section class="section info-section parallax-bg" id="lokasi-gift">
+        <!-- Section 5: Lokasi Google Maps -->
+        <section class="snap-section info-section">
             <div class="info-wrapper">
-                <h2>Lokasi & Informasi</h2>
-
-                <!-- Google Maps -->
+                <h2>Lokasi Acara</h2>
                 <div class="info-card">
-                    <h3><i class="fa-solid fa-map-location-dot"></i> Lokasi Acara</h3>
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666!2d106.82496!3d-6.17539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMzEuNCJTIDEwNsKwNDknMjkuOSJF!5e0!3m2!1sid!2sid!4v1!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666!2d106.82496!3d-6.17539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMzEuNCJTIDEwNsKwNDknMjkuOSJF!5e0!3m2!1sid!2sid!4v1!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Rekening Bank -->
+        <!-- Section 6: Gift & Transfer (Penutup) -->
+        <section class="snap-section info-section parallax-bg">
+            <div class="info-wrapper">
+                <h2>Amplop & Kado</h2>
                 <div class="info-card">
-                    <h3><i class="fa-solid fa-wallet"></i> Kirim Amplop / Rekening</h3>
-                    <p>Doa restu Anda merupakan karunia terindah. Jika ingin memberi tanda kasih, dapat melalui:</p>
+                    <h3><i class="fa-solid fa-wallet"></i> Transfer Bank</h3>
                     <div class="bank-box">
-                        <p><strong>BCA</strong></p>
-                        <p id="acc-no">1234567890</p>
+                        <p><strong>BCA</strong> - 1234567890</p>
                         <p>a.n. Nama Pemilik Rekening</p>
-                        <button class="btn-sm" onclick="copyText('1234567890')"><i class="fa-regular fa-copy"></i> Salin Nomor Rekening</button>
+                        <button class="btn-sm" onclick="copyText('1234567890')"><i class="fa-regular fa-copy"></i> Salin Rekening</button>
                     </div>
                 </div>
-
-                <!-- Alamat Gift / Kado Fisik -->
                 <div class="info-card">
                     <h3><i class="fa-solid fa-gift"></i> Kirim Kado Fisik</h3>
-                    <p>Alamat Pengiriman Kado:</p>
                     <address class="address-box">
-                        <strong>Rumah Mempelai</strong><br>
-                        Jl. Contoh Alamat No. 123, RT 01/RW 02, Kel. Menteng, Kec. Menteng, Jakarta Pusat, 10310
+                        Jl. Contoh Alamat No. 123, Jakarta Pusat, 10310
                     </address>
                     <button class="btn-sm" onclick="copyText('Jl. Contoh Alamat No. 123, Jakarta Pusat')"><i class="fa-regular fa-copy"></i> Salin Alamat</button>
                 </div>
             </div>
+            <footer>
+                <p>&copy; 2026 Undangan Pernikahan - Nama & Pasangan</p>
+            </footer>
         </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Undangan Pernikahan - Nama & Pasangan</p>
-        </footer>
     </div>
 
     <script src="script.js"></script>
